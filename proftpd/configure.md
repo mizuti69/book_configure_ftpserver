@@ -158,6 +158,21 @@ ExtendedLog /var/log/proftpd/proftpd_access.log all
 SystemLog /var/log/proftpd/proftpd.log
 ```
 
+**ログのローテート設定**  
+
+```
+# vim /etc/logrotate.d/proftpd
+/var/log/proftpd/*.log /var/log/xferlog {
+    compress
+    missingok
+    notifempty
+    sharedscripts
+    postrotate
+        systemctl reload proftpd.service
+    endscript
+}
+```
+
 ## セッション設定
 
 **アイドル状態での接続を維持している時間**  
