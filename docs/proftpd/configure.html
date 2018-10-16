@@ -1,0 +1,388 @@
+
+<!DOCTYPE HTML>
+<html lang="ja" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>基本設定 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="configure_access.html" />
+    
+    
+    <link rel="prev" href="install.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="検索すると入力" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Title
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    vsftpd
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    proftpd
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="install.html">
+            
+                <a href="install.html">
+            
+                    
+                    インストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="configure.html">
+            
+                <a href="configure.html">
+            
+                    
+                    基本設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="configure_access.html">
+            
+                <a href="configure_access.html">
+            
+                    
+                    アクセス制御
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="configure_ssl.html">
+            
+                <a href="configure_ssl.html">
+            
+                    
+                    FTPS設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            GitBookで公開 
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >基本設定</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x57FA;&#x672C;&#x8A2D;&#x5B9A;">&#x57FA;&#x672C;&#x8A2D;&#x5B9A;</h1>
+<h2 id="&#x30B5;&#x30FC;&#x30D0;&#x8A2D;&#x5B9A;">&#x30B5;&#x30FC;&#x30D0;&#x8A2D;&#x5B9A;</h2>
+<p><strong>&#x30B5;&#x30FC;&#x30D0;&#x540D;</strong>  </p>
+<pre><code># vim /etc/proftpd.conf
+ServerName &quot;localhost.localdomain&quot;
+</code></pre><p><strong>HELO&#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;</strong>  </p>
+<pre><code># vim /etc/proftpd.conf
+ServerName &quot;ftp server&quot;
+</code></pre><p><strong>&#x30B5;&#x30FC;&#x30D0;&#x8D77;&#x52D5;&#x30BF;&#x30A4;&#x30D7;</strong><br>&#x30B9;&#x30BF;&#x30F3;&#x30C9;&#x30A2;&#x30ED;&#x30FC;&#x30F3;&#x30E2;&#x30FC;&#x30C9;&#x306E;&#x5834;&#x5408;&#x306F;<code>standalone</code><br>&#x30B9;&#x30FC;&#x30D1;&#x30FC;&#x30B5;&#x30FC;&#x30D0;&#x30E2;&#x30FC;&#x30C9;&#x306E;&#x5834;&#x5408;&#x306F;<code>Inetd</code>  </p>
+<pre><code># vim /etc/proftpd.conf
+ServerType Inetd
+</code></pre><p><strong>&#x8D77;&#x52D5;&#x30E6;&#x30FC;&#x30B6;&#x30FC;</strong><br>&#x30C7;&#x30FC;&#x30E2;&#x30F3;&#x8D77;&#x52D5;&#x6642;&#x306B;&#x5229;&#x7528;  </p>
+<pre><code># vim /etc/proftpd.conf
+User nobody
+Group nobody
+</code></pre><p><strong>&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x30B5;&#x30FC;&#x30D0;&#x8A2D;&#x5B9A;</strong><br>&#x8907;&#x6570;&#x306E;FTP&#x30B5;&#x30FC;&#x30D0;&#x3092;&#x4EEE;&#x60F3;&#x30B5;&#x30FC;&#x30D0;&#x3067;&#x7ACB;&#x3066;&#x3066;&#x3044;&#x308B;&#x5834;&#x5408;&#x306E;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x30B5;&#x30FC;&#x30D0;&#x3092;&#x8A2D;&#x5B9A;&#x3059;&#x308B;  </p>
+<pre><code># vim /etc/proftpd.conf
+DefaultServer On
+</code></pre><p><strong>&#x30EA;&#x30B9;&#x30CB;&#x30F3;&#x30B0;&#x30DD;&#x30FC;&#x30C8;</strong>  </p>
+<pre><code># vim /etc/proftpd.conf
+Port 21
+</code></pre><p><strong>&#x30D1;&#x30C3;&#x30B7;&#x30D6;&#x30DD;&#x30FC;&#x30C8;&#x7BC4;&#x56F2;</strong><br>&#x30D1;&#x30C3;&#x30B7;&#x30D6;&#x30E2;&#x30FC;&#x30C9;&#x3067;&#x5229;&#x7528;&#x3059;&#x308B;&#x30DD;&#x30FC;&#x30C8;&#x7BC4;&#x56F2;&#x3092;&#x6307;&#x5B9A;&#x3067;&#x304D;&#x308B;  </p>
+<pre><code># vim /etc/proftpd.conf
+PassivePorts 60000 60040
+</code></pre><p><strong>&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;Umask</strong>  </p>
+<pre><code># vim /etc/proftpd.conf
+Umask 002
+</code></pre><p><strong>&#x6642;&#x523B;&#x8A2D;&#x5B9A;</strong><br>&#x8868;&#x793A;&#x3084;&#x30ED;&#x30B0;&#x3067;&#x5229;&#x7528;&#x3059;&#x308B;&#x30B5;&#x30FC;&#x30D0;&#x6642;&#x523B;  </p>
+<pre><code># vim /etc/proftpd.conf
+TimesGMT off
+SetEnv TZ JST-9
+</code></pre><p><strong>IDENT&#x30D7;&#x30ED;&#x30C8;&#x30B3;&#x30EB;&#x306E;&#x5229;&#x7528;</strong>  </p>
+<pre><code># vim /etc/proftpd.conf
+IdentLookups off
+</code></pre><p><strong>&#x63A5;&#x7D9A;&#x5143;&#x306E;&#x540D;&#x524D;&#x89E3;&#x6C7A;</strong>  </p>
+<pre><code># vim /etc/proftpd.conf
+UseReverseDNS off
+</code></pre><p><strong>IPv6&#x306E;&#x7121;&#x52B9;&#x5316;</strong>  </p>
+<pre><code># vim /etc/proftpd.conf
+UseIPv6 off
+</code></pre><p><strong>NAT&#x5BFE;&#x5FDC;</strong><br>&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8; &lt;-&gt; &#x30B5;&#x30FC;&#x30D0;&#x9593;&#x3067;NW&#x6A5F;&#x5668;&#x306B;&#x3088;&#x308A;NAT&#x5909;&#x63DB;&#x3055;&#x308C;&#x308B;&#x5834;&#x5408;<br>FTP&#x30B5;&#x30FC;&#x30D0;&#x306F;&#x81EA;&#x8EAB;&#x306E;IP&#x3067;&#x901A;&#x4FE1;&#x56DE;&#x7B54;&#x3057;&#x63A5;&#x7D9A;&#x304C;&#x4E0A;&#x624B;&#x304F;&#x3044;&#x304B;&#x306A;&#x3044;&#x305F;&#x3081;&#x3001;&#x5916;&#x90E8;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3092;&#x660E;&#x8A18;&#x3059;&#x308B;  </p>
+<pre><code># vim /etc/proftpd.conf
+MasqueradeAddress 127.0.0.1
+</code></pre><h2 id="&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x8A2D;&#x5B9A;">&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x8A2D;&#x5B9A;</h2>
+<p><strong>&#x5229;&#x7528;&#x8A8D;&#x8A3C;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;</strong>  </p>
+<pre><code># vim /etc/proftpd.conf
+AuthPAMConfig proftpd
+AuthOrder mod_auth_pam.c* mod_auth_unix.c
+</code></pre><p><strong>&#x8A8D;&#x8A3C;&#x8A66;&#x884C;&#x56DE;&#x6570;&#x5236;&#x9650;</strong>  </p>
+<pre><code># vim /etc/proftpd.conf
+MaxLoginAttempts 10
+</code></pre><p><strong>ROOT&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x306E;&#x30ED;&#x30B0;&#x30A4;&#x30F3;&#x7121;&#x52B9;&#x5316;</strong>  </p>
+<pre><code># vim /etc/proftpd.conf
+RootLogin off
+</code></pre><p><strong>OS&#x8A8D;&#x8A3C;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x5229;&#x7528;&#x8A31;&#x53EF;</strong><br>&#x8A8D;&#x8A3C;&#x3001;&#x30E6;&#x30FC;&#x30B6;&#x30FC;/&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x691C;&#x7D22;&#x3001;&#x30E6;&#x30FC;&#x30B6;&#x30FC;/&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x3068;&#x540D;&#x524D;&#x306E;&#x30DE;&#x30C3;&#x30D4;&#x30F3;&#x30B0;&#x3092;proftpd&#x304C;&#x3069;&#x306E;&#x3088;&#x3046;&#x306B;&#x6271;&#x3046;&#x304B;&#x3092;&#x5236;&#x5FA1;<br>&quot;on&quot;&#x306B;&#x8A2D;&#x5B9A;&#x3059;&#x308B;&#x3068;&#x3001;proftpd&#x306F;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x5168;&#x4F53;&#x306E;/ etc / passwd&#x3001;/ etc / group&#xFF08;&#x3068;/ etc / shadow&#x3001;&#x6F5C;&#x5728;&#x7684;&#x306B;&#xFF09;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x81EA;&#x4F53;&#x3092;&#x958B;&#x304D;&#x3001;chroot&#xFF08;&#xFF09;&#x306E;&#x30ED;&#x30B0;&#x30A4;&#x30F3;&#x6642;&#x306B;&#x3082;&#x958B;&#x3044;&#x305F;&#x307E;&#x307E;&#x306B;&#x3057;&#x307E;&#x3059;  </p>
+<pre><code># vim /etc/proftpd.conf
+PersistentPasswd off
+</code></pre><h2 id="&#x30ED;&#x30AE;&#x30F3;&#x30B0;">&#x30ED;&#x30AE;&#x30F3;&#x30B0;</h2>
+<p><strong>&#x30ED;&#x30B0;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30C3;&#x30C8;</strong>  </p>
+<pre><code># vim /etc/proftpd.conf
+LogFormat default &quot;%h %l %u %t \&quot;%r\&quot; %s \&quot;%f\&quot; %b&quot;
+</code></pre><p><strong>&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x30ED;&#x30B0;&#x51FA;&#x529B;&#x5148;</strong>  </p>
+<pre><code># vim /etc/proftpd.conf
+ExtendedLog /var/log/proftpd/proftpd_access.log all
+</code></pre><p><strong>&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30ED;&#x30B0;&#x51FA;&#x529B;&#x5148;</strong>  </p>
+<pre><code># vim /etc/proftpd.conf
+SystemLog /var/log/proftpd/proftpd.log
+</code></pre><h2 id="&#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x8A2D;&#x5B9A;">&#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x8A2D;&#x5B9A;</h2>
+<p><strong>&#x30A2;&#x30A4;&#x30C9;&#x30EB;&#x72B6;&#x614B;&#x3067;&#x306E;&#x63A5;&#x7D9A;&#x3092;&#x7DAD;&#x6301;&#x3057;&#x3066;&#x3044;&#x308B;&#x6642;&#x9593;</strong>  </p>
+<pre><code># vim /etc/proftpd.conf
+TimeoutIdle 600
+</code></pre><p><strong>&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x8A8D;&#x8A3C;&#x30BF;&#x30A4;&#x30E0;&#x30A2;&#x30A6;&#x30C8;&#x6642;&#x9593;</strong>  </p>
+<pre><code># vim /etc/proftpd.conf
+TimeoutLogin 1800
+</code></pre><p><strong>&#x8A8D;&#x8A3C;&#x5F8C;&#x3001;&#x7121;&#x8EE2;&#x9001;&#x30BF;&#x30A4;&#x30E0;&#x30A2;&#x30A6;&#x30C8;&#x6642;&#x9593;</strong>  </p>
+<pre><code># vim /etc/proftpd.conf
+TimeoutNoTransfer 1800
+</code></pre><p><strong>&#x8A8D;&#x8A3C;&#x5F8C;&#x3001;&#x5236;&#x5FA1;&#x30B3;&#x30CD;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x30BF;&#x30A4;&#x30E0;&#x30A2;&#x30A6;&#x30C8;&#x6642;&#x9593;</strong>  </p>
+<pre><code># vim /etc/proftpd.conf
+TimeoutSession 3600
+</code></pre><p><strong>&#x8A8D;&#x8A3C;&#x5F8C;&#x3001;&#x30C7;&#x30FC;&#x30BF;&#x30B3;&#x30CD;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x30BF;&#x30A4;&#x30E0;&#x30A2;&#x30A6;&#x30C8;&#x6642;&#x9593;</strong>  </p>
+<pre><code># vim /etc/proftpd.conf
+TimeoutStalled 1800
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="install.html" class="navigation navigation-prev " aria-label="Previous page: インストール">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="configure_access.html" class="navigation navigation-next " aria-label="Next page: アクセス制御">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"基本設定","level":"1.3.2","depth":2,"next":{"title":"アクセス制御","level":"1.3.3","depth":2,"path":"proftpd/configure_access.md","ref":"proftpd/configure_access.md","articles":[]},"previous":{"title":"インストール","level":"1.3.1","depth":2,"path":"proftpd/install.md","ref":"proftpd/install.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"proftpd/configure.md","mtime":"2018-10-16T03:24:00.966Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-16T03:42:08.225Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
